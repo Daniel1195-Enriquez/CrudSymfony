@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Warriors Labs</title>
+        
+        <link rel="stylesheet" href="{{ absolute_url(asset('css/bootstrap.css')) }}" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <div class="navbar-header">
+
+              <a class="navbar-brand" href="/post">Prueba del CRUD</a>
+            </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+
+
+          </div>       
+      </div>
+    </nav>
+    <div class="container">
+    {% for success_message in app.session.flashbag.get('message') %}
+      <div class="alert alert-success">{{ success_message}}</div>
+    {% endfor %}
+    </body>
+</html>
